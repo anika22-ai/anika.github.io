@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ANIKA .A — Portfolio</title>
+    <meta
+      name="description"
+      content="ANIKA .A — Web Dev · UI/UX · Video · Graphics"
+    />
+    <meta name="theme-color" content="#111827" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity=""
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="#home" aria-label="Home">
+          <span class="logo" aria-hidden="true"></span>
+          <span class="brand-name">ANIKA .A</span>
+        </a>
+
+        <ul class="nav-links" role="menubar" aria-label="Primary navigation">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button
+            id="themeToggle"
+            class="btn"
+            aria-pressed="false"
+            aria-label="Toggle theme"
+          >
+            <i class="fa-solid fa-moon"></i><span class="hide-sm"> Theme</span>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile sheet -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div
+          class="mobile-sheet"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile menu"
+        >
+          <div class="mobile-head">
+            <strong>Menu</strong>
+            <button class="btn" id="closeMenu" aria-label="Close menu">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <nav class="mobile-nav">
+            <a class="m-link" href="#about">About</a>
+            <a class="m-link" href="#skills">Skills</a>
+            <a class="m-link" href="#projects">Projects</a>
+            <a class="m-link" href="#services">Services</a>
+            <a class="m-link" href="#testimonials">Testimonials</a>
+            <a class="m-link" href="#contact">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="container hero">
+      <div class="hero-copy">
+        <span class="chip"
+          ><i class="fa-solid fa-sparkles"></i> Portfolio v1.0</span
+        >
+        <h1 class="title">
+          Hi, I'm Anika — building useful, beautiful web experiences.
+        </h1>
+        <p class="subtitle">
+          I blend <strong>code</strong> + <strong>design</strong> to craft fast,
+          accessible sites and AI-infused apps. Currently exploring fashion-tech
+          and automation.
+        </p>
+
+        <div class="roles" aria-live="polite">
+          <span class="role">Web Developer</span>
+          <span class="role">UI/UX Designer</span>
+          <span class="role">Video Editor</span>
+          <span class="role">Graphic Designer</span>
+        </div>
+
+        <div class="cta">
+          <a href="#projects" class="btn"
+            ><i class="fa-solid fa-rocket"></i> Explore Projects</a
+          >
+          <a href="#contact" class="btn"
+            ><i class="fa-solid fa-paper-plane"></i> Hire Me</a
+          >
+          <a href="#" class="btn" download="ANIKA_A_CV.pdf"
+            ><i class="fa-solid fa-file-arrow-down"></i> Download CV</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-visual panel will-reveal" aria-hidden="true">
+        <div class="orbs" aria-hidden="true">
+          <div class="orb p1"></div>
+          <div class="orb p2"></div>
+        </div>
+
+        <div class="dev-card" aria-hidden="true">
+          <header>
+            <span class="dot"></span><span class="dot"></span
+            ><span class="dot"></span>
+            <span class="muted">/dev/console</span>
+          </header>
+
+          <pre
+            class="code"
+            id="codeBlock"
+            aria-hidden="true"
+          ><code></code></pre>
+
+          <div class="meta muted small">
+            <span><i class="fa-regular fa-clock"></i> live preview</span>
+            <span><i class="fa-solid fa-bolt"></i> performant</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-sub">
+        18-year-old CSBS student at SJCE (Mysuru). I love turning ideas into
+        interactive products. Outside code, you'll find me dancing 🕺 and
+        geeking out on design systems.
+      </p>
+
+      <div class="about">
+        <article class="panel">
+          <h3>What I do</h3>
+          <p>
+            I design and build responsive websites, dashboards and micro-apps. I
+            care about clean UI, smooth UX, and shipping fast. I'm also building
+            an <strong>AI Fashion Agency</strong> with virtual try-on, smart
+            sizing, and chatbots.
+          </p>
+          <div class="tags">
+            <span class="tag">Responsive Web</span>
+            <span class="tag">Design Systems</span>
+            <span class="tag">Motion</span>
+            <span class="tag">AI Automation</span>
+            <span class="tag">Video Editing</span>
+          </div>
+        </article>
+
+        <aside class="panel highlights">
+          <h3>Highlights</h3>
+          <div class="stats">
+            <div class="stat">
+              <h3 class="counter" data-to="24">0</h3>
+              <p>Projects</p>
+            </div>
+            <div class="stat">
+              <h3 class="counter" data-to="12">0</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat">
+              <h3 class="counter" data-to="30">0</h3>
+              <p>Designs</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-sub">
+        Always learning. Always shipping. Here's my current toolkit.
+      </p>
+
+      <div class="skills">
+        <div class="panel skill-col">
+          <h3>Frontend</h3>
+          <div class="skill">
+            <div class="skill-header">
+              <span>HTML / CSS</span><span>95%</span>
+            </div>
+            <div class="bar"><span data-pct="95"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header">
+              <span>JavaScript</span><span>85%</span>
+            </div>
+            <div class="bar"><span data-pct="85"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header"><span>React</span><span>75%</span></div>
+            <div class="bar"><span data-pct="75"></span></div>
+          </div>
+        </div>
+
+        <div class="panel skill-col">
+          <h3>Design & Tools</h3>
+          <div class="skill">
+            <div class="skill-header">
+              <span>Figma / UI</span><span>90%</span>
+            </div>
+            <div class="bar"><span data-pct="90"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header">
+              <span>Video Editing</span><span>80%</span>
+            </div>
+            <div class="bar"><span data-pct="80"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-header">
+              <span>Automation (AI)</span><span>70%</span>
+            </div>
+            <div class="bar"><span data-pct="70"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">
+        A selection of things I loved building. Filter to explore.
+      </p>
+
+      <div class="filter" role="tablist">
+        <button class="active" data-filter="all" role="tab">All</button>
+        <button data-filter="web" role="tab">Web</button>
+        <button data-filter="ui" role="tab">UI/UX</button>
+        <button data-filter="ai" role="tab">AI</button>
+        <button data-filter="video" role="tab">Video</button>
+      </div>
+
+      <div class="grid" id="projectGrid" aria-live="polite">
+        <!-- Example cards -->
+        <article class="panel card" data-cat="web ai">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Virtual Try-On (Web)</h3>
+            <p class="muted">
+              Camera-based clothing overlay using MediaPipe Pose.
+            </p>
+            <div class="tags">
+              <span class="tag">JS</span><span class="tag">MediaPipe</span
+              ><span class="tag">Canvas</span>
+            </div>
+          </div>
+          <div class="reveal">
+            Real-time garment fit with background removal and physics-like
+            drape.
+          </div>
+        </article>
+
+        <article class="panel card" data-cat="ui">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Design System — Aurora</h3>
+            <p class="muted">
+              Reusable components, tokens and motion guidelines.
+            </p>
+            <div class="tags">
+              <span class="tag">Figma</span><span class="tag">Tokens</span>
+            </div>
+          </div>
+          <div class="reveal">Built for speed and consistency across apps.</div>
+        </article>
+
+        <article class="panel card" data-cat="web">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Restaurant Site</h3>
+            <p class="muted">
+              Tasty UI with animations and adminless CMS via JSON.
+            </p>
+            <div class="tags">
+              <span class="tag">Responsive</span><span class="tag">A11y</span>
+            </div>
+          </div>
+          <div class="reveal">Optimized images, Lighthouse 95+ scores.</div>
+        </article>
+
+        <article class="panel card" data-cat="ai web">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Smart Size Recommender</h3>
+            <p class="muted">
+              Suggests best fit using body measures and returns data.
+            </p>
+            <div class="tags">
+              <span class="tag">ML</span><span class="tag">API</span>
+            </div>
+          </div>
+          <div class="reveal">
+            Reduces returns by predicting fit confidence.
+          </div>
+        </article>
+
+        <article class="panel card" data-cat="video">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Product Teaser</h3>
+            <p class="muted">Short motion piece for social media launch.</p>
+            <div class="tags">
+              <span class="tag">After Effects</span
+              ><span class="tag">Premiere</span>
+            </div>
+          </div>
+          <div class="reveal">Crisp edits, snappy captions, bold rhythm.</div>
+        </article>
+
+        <article class="panel card" data-cat="ui web">
+          <div class="thumb" aria-hidden="true"></div>
+          <div class="content">
+            <h3>Portfolio v1 (this)</h3>
+            <p class="muted">Single-file, performant, and accessible.</p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span
+              ><span class="tag">JS</span>
+            </div>
+          </div>
+          <div class="reveal">Zero build tools, fast to deploy anywhere.</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-sub">
+        Pick a package or mix & match to fit your goals.
+      </p>
+
+      <div class="services">
+        <div class="panel service">
+          <div class="flex">
+            <i class="fa-solid fa-code"></i>
+            <h3>Web Development</h3>
+          </div>
+          <p class="muted">
+            Landing pages, dashboards, e-commerce and more — fast, responsive,
+            accessible.
+          </p>
+        </div>
+
+        <div class="panel service">
+          <div class="flex">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h3>UI/UX Design</h3>
+          </div>
+          <p class="muted">
+            Wireframes to polished UI with consistent design systems and motion.
+          </p>
+        </div>
+
+        <div class="panel service">
+          <div class="flex">
+            <i class="fa-solid fa-robot"></i>
+            <h3>AI Automation</h3>
+          </div>
+          <p class="muted">
+            Chatbots, workflows, and tools to save time and grow revenue.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="container">
+      <h2 class="section-title">Testimonials</h2>
+      <p class="section-sub">Client words that make my day.</p>
+
+      <div class="panel carousel" aria-roledescription="carousel">
+        <div class="slides" id="slides">
+          <div class="t-item">
+            <p>
+              “Anika shipped our site in days, not weeks. Clean code. Great
+              design taste.”
+            </p>
+            <p class="muted">— Riya S., Startup Founder</p>
+          </div>
+          <div class="t-item">
+            <p>
+              “The try-on demo wowed our team. Exactly what we needed for our
+              pitch.”
+            </p>
+            <p class="muted">— Karthik P., Fashion Brand PM</p>
+          </div>
+          <div class="t-item">
+            <p>
+              “Professional, proactive, and fun to work with. 10/10 will hire
+              again.”
+            </p>
+            <p class="muted">— Meera D., Agency Lead</p>
+          </div>
+        </div>
+
+        <div class="carousel-controls">
+          <button class="btn" id="prev" aria-label="Previous">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <div class="muted" id="dots" aria-label="Slide indicators"></div>
+          <button class="btn" id="next" aria-label="Next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Have a project or idea? Let's talk.</p>
+
+      <div class="panel contact-panel">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label class="muted">Name</label
+              ><input id="name" name="name" required placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label class="muted">Email</label
+              ><input
+                id="email"
+                type="email"
+                name="email"
+                required
+                placeholder="you@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="muted">Message</label
+            ><textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              placeholder="Tell me about your project..."
+            ></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">
+              <i class="fa-solid fa-paper-plane"></i> Send
+            </button>
+            <a
+              class="btn"
+              href="mailto:hello@example.com?subject=Project%20Inquiry%20—%20Anika"
+              aria-label="Email"
+              ><i class="fa-regular fa-envelope"></i> Email</a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="container footer">
+      <span>© <span id="year"></span> ANIKA .A — All rights reserved.</span>
+      <div class="socials">
+        <a class="btn small" href="#" aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a class="btn small" href="#" aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a class="btn small" href="#" aria-label="X"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+      </div>
+    </footer>
+
+    <button class="btn to-top" id="toTop" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
